@@ -2,7 +2,7 @@
 set :deploy_to, "/Users/tim/workspaces/permatime-helper/localdeploy/"
 set :domain, "localhost"
 
-set :user, 'permatime'
+set :user, 'tim'
 set :keep_db_backups, 100
 
 role :web, domain

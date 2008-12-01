@@ -29,3 +29,6 @@ namespace :deploy do
     puts "no migrations to do (no db!)"    
   end
 end
+
+task(:debug_env) { run "env" }
+task(:debug_flootl) { run "git help" }

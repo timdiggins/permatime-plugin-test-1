@@ -1,0 +1,1 @@
+Time.send :include, PermatimeTimeMonkeypatcher

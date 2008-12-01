@@ -1,0 +1,22 @@
+<h1>Listing happenings</h1>
+
+<table border='1'>
+  <tr>
+    <th>Title</th>
+  </tr>
+
+<% for happening in @happenings %>
+  <tr>
+    <td><p><%=h happening.title %></p>
+    <p><%= link_to nil, permatime(happening.created_at, :title=>happening.title) %></p>
+    <p><%= link_to nil, happening.created_at.permatime %></p>
+    <td><%= link_to 'Show', happening %></td>
+    <td><%= link_to 'Edit', edit_happening_path(happening) %></td>
+    <td><%= link_to 'Destroy', happening, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New happening', new_happening_path %>
